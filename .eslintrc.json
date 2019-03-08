@@ -1,0 +1,78 @@
+
+Skip to content
+
+Pull requests
+Issues
+Marketplace
+Explore
+
+@apxnishanth
+
+0
+0
+
+13
+
+apxnishanth/amazon-201d1 forked from codefellows/amazon-201d1
+Code
+Pull requests 0
+Projects 0
+Wiki
+Insights
+Settings
+amazon-201d1/config/.eslintrc.json
+@bnates bnates added config/day 1 content cbf6074 29 days ago
+39 lines (38 sloc) 694 Bytes
+{
+"extends": "eslint:recommended",
+"parserOptions": {
+"ecmaVersion": 6,
+"ecmaFeatures": {
+  "impliedStrict": true
+}
+},
+"env": {
+"browser": true,
+"es6": true
+},
+"rules": {
+"eqeqeq": ["error", "always"],
+"no-console": "off",
+"no-undefined": "off",
+"indent": ["error", 2],
+"quotes": ["warn", "single"],
+"no-multi-spaces": [
+  "warn",
+  {
+    "exceptions": {
+      "VariableDeclarator": true
+    }
+  }
+],
+"no-trailing-spaces": "warn",
+"new-cap": "warn",
+"no-redeclare": [
+  "error",
+  {
+    "builtinGlobals": true
+  }
+],
+"semi": [2, "always"],
+"eol-last": "error"
+}
+}
+
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
