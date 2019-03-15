@@ -20,9 +20,9 @@ for (var storeOpenTime = 6; storeOpenTime <= storeCloseTime ; storeOpenTime++){
 }
 console.log(storeOpenHours);
 
-var locationPikestreet ={
-  minHourlyCustomers:Math.ceil(Math.random())*10,
-  maxHourlyCustomers:Math.ceil(Math.random())*30,
+var locationSeaTac ={
+  minHourlyCustomers:Math.ceil(Math.random())*35,
+  maxHourlyCustomers:Math.ceil(Math.random())*57,
   averageCookiesPerHour:[],
   averageCustomersPerHour:[],
   averageCookiesPerCustomer:[]
@@ -30,41 +30,39 @@ var locationPikestreet ={
 
 for (var i = 0; i <= storeOpenHours.length; i++) {
   var perHourCustomers = Math.floor(Math.random()
-* (locationPikestreet.maxHourlyCustomers -
-locationPikestreet.minHourlyCustomers + 1))
-+ locationPikestreet.minHourlyCustomers;
-  locationPikestreet.averageCustomersPerHour.push(perHourCustomers);
+* (locationSeaTac.maxHourlyCustomers -
+locationSeaTac.minHourlyCustomers + 1))
++ locationSeaTac.minHourlyCustomers;
+  locationSeaTac.averageCustomersPerHour.push(perHourCustomers);
 }
-console.log(locationPikestreet.averageCustomersPerHour);
+console.log(locationSeaTac.averageCustomersPerHour);
 
 for (var j = 0; j <= storeOpenHours.length; j++) {
   var perHourCookies = Math.ceil(
-    locationPikestreet.averageCustomersPerHour[j] *
+    locationSeaTac.averageCustomersPerHour[j] *
  Math.ceil(Math.floor(Math.random() * 16) + 5));
-  locationPikestreet.averageCookiesPerHour.push(perHourCookies);
+  locationSeaTac.averageCookiesPerHour.push(perHourCookies);
 }
-console.log(locationPikestreet.averageCookiesPerHour);
+console.log(locationSeaTac.averageCookiesPerHour);
 
 for (var z = 0; z <= storeOpenHours.length; z++) {
   var perCustomerCookies = Math.ceil(
-    locationPikestreet.averageCookiesPerHour[z]
-/ locationPikestreet.averageCustomersPerHour[z]);
-  locationPikestreet.averageCookiesPerCustomer.push(perCustomerCookies);
+    locationSeaTac.averageCookiesPerHour[z]
+/ locationSeaTac.averageCustomersPerHour[z]);
+  locationSeaTac.averageCookiesPerCustomer.push(perCustomerCookies);
 }
-console.log('averageCookiesPerCustomer: ' + locationPikestreet.averageCookiesPerCustomer);
+console.log(locationSeaTac.averageCookiesPerCustomer);
 
 for (var k = 0 ; k < storeOpenHours.length ; k++){
-  var cookie = locationPikestreet.averageCookiesPerCustomer[k];
+  var cookie = locationSeaTac.averageCookiesPerCustomer[k];
   var cookieDisplay = storeOpenHours[k] + ': ' + cookie;
   totalCookies = parseInt(cookie) + parseInt(totalCookies);
   hourlyCookies.push(cookieDisplay);
 }
 totalCookies = 'Total Cookies: ' + totalCookies;
-console.log('HOURLY COOKIES : ' + hourlyCookies);
+console.log(hourlyCookies);
 
-var cookiesHour = document.getElementById('cookies-Hour');
-
-console.log('HOURLY COOKIES 2: ' + hourlyCookies.length);
+var cookiesHour = document.getElementById('seatac-cookies-Hour');
 
 for (var l = 0; l < hourlyCookies.length; l++) {
   var liEl = document.createElement('li');
