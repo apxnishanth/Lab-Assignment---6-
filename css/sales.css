@@ -1,0 +1,21 @@
+table, th, td{
+  padding: 20px;
+  border: solid 1px black;
+}
+
+th, td{
+  text-align: center;
+  vertical-align: bottom;
+}
+
+th{
+  background-color: "#FF0000";
+}
+
+tr:hover {
+  background-color: yellowgreen;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
